@@ -41,6 +41,8 @@ export interface TouchableHighlightProps extends TouchableWithoutFeedbackProps {
    */
   style?: StyleProp<ViewStyle> | undefined;
 
+  className?: string;
+
   /**
    * The color of the underlay that will show through when the touch is active.
    */

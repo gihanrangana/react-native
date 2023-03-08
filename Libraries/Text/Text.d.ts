@@ -182,6 +182,8 @@ export interface TextProps
    */
   style?: StyleProp<TextStyle> | undefined;
 
+  className?: string;
+
   /**
    * Used to locate this view in end-to-end tests.
    */

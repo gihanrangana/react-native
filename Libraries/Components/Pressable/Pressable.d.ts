@@ -8,18 +8,18 @@
  */
 
 import type * as React from 'react';
-import {Insets} from '../../../types/public/Insets';
-import {ColorValue, StyleProp} from '../../StyleSheet/StyleSheet';
-import {ViewStyle} from '../../StyleSheet/StyleSheetTypes';
+import { Insets } from '../../../types/public/Insets';
+import { ColorValue, StyleProp } from '../../StyleSheet/StyleSheet';
+import { ViewStyle } from '../../StyleSheet/StyleSheetTypes';
 import {
   GestureResponderEvent,
   MouseEvent,
   NativeSyntheticEvent,
   TargetedEvent,
 } from '../../Types/CoreEventTypes';
-import {View} from '../View/View';
-import {AccessibilityProps} from '../View/ViewAccessibility';
-import {ViewProps} from '../View/ViewPropTypes';
+import { View } from '../View/View';
+import { AccessibilityProps } from '../View/ViewAccessibility';
+import { ViewProps } from '../View/ViewPropTypes';
 
 export interface PressableStateCallbackType {
   readonly pressed: boolean;
@@ -34,7 +34,7 @@ export interface PressableAndroidRippleConfig {
 
 export interface PressableProps
   extends AccessibilityProps,
-    Omit<ViewProps, 'children' | 'style' | 'hitSlop'> {
+  Omit<ViewProps, 'children' | 'style' | 'hitSlop'> {
   /**
    * Called when the hover is activated to provide visual feedback.
    */
@@ -70,27 +70,27 @@ export interface PressableProps
    * @platform macos windows
    */
   onBlur?:
-    | null
-    | ((event: NativeSyntheticEvent<TargetedEvent>) => void)
-    | undefined;
+  | null
+  | ((event: NativeSyntheticEvent<TargetedEvent>) => void)
+  | undefined;
 
   /**
    * Called after the element is focused.
    * @platform macos windows
    */
   onFocus?:
-    | null
-    | ((event: NativeSyntheticEvent<TargetedEvent>) => void)
-    | undefined;
+  | null
+  | ((event: NativeSyntheticEvent<TargetedEvent>) => void)
+  | undefined;
 
   /**
    * Either children or a render prop that receives a boolean reflecting whether
    * the component is currently pressed.
    */
   children?:
-    | React.ReactNode
-    | ((state: PressableStateCallbackType) => React.ReactNode)
-    | undefined;
+  | React.ReactNode
+  | ((state: PressableStateCallbackType) => React.ReactNode)
+  | undefined;
 
   /**
    * Whether a press gesture can be interrupted by a parent gesture such as a
@@ -151,10 +151,11 @@ export interface PressableProps
    * the component is currently pressed and returns view styles.
    */
   style?:
-    | StyleProp<ViewStyle>
-    | ((state: PressableStateCallbackType) => StyleProp<ViewStyle>)
-    | undefined;
+  | StyleProp<ViewStyle>
+  | ((state: PressableStateCallbackType) => StyleProp<ViewStyle>)
+  | undefined;
 
+  className?: string;
   /**
    * Duration (in milliseconds) to wait after press down before calling onPressIn.
    */
