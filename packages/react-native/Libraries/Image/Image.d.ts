@@ -123,6 +123,8 @@ export interface ImagePropsBase
    */
   id?: string | undefined;
 
+  className?: string;
+
   /**
    * onLayout function
    *
@@ -323,6 +325,8 @@ export interface ImageProps extends ImagePropsBase {
    * Style
    */
   style?: StyleProp<ImageStyle> | undefined;
+
+  className?: string;
 }
 
 declare class ImageComponent extends React.Component<ImageProps> {}

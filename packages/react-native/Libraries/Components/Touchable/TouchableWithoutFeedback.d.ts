@@ -113,6 +113,8 @@ export interface TouchableWithoutFeedbackProps
    */
   style?: StyleProp<ViewStyle> | undefined;
 
+  className?: string;
+
   /**
    * When the scroll view is disabled, this defines how far your
    * touch may move off of the button, before deactivating the button.

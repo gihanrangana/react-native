@@ -233,6 +233,8 @@ export interface ViewProps
 
   style?: StyleProp<ViewStyle> | undefined;
 
+  className?: string;
+
   /**
    * Used to locate this view in end-to-end tests.
    */

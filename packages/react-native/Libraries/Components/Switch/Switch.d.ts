@@ -100,6 +100,8 @@ export interface SwitchProps extends SwitchPropsIOS {
   ios_backgroundColor?: ColorValue | undefined;
 
   style?: StyleProp<ViewStyle> | undefined;
+
+  className?: string;
 }
 
 /**
